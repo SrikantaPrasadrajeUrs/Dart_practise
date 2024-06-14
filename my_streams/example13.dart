@@ -1,9 +1,12 @@
 import 'dart:async';
+import 'dart:developer';
+
 //merging
 void main(List<String> args) async {
-  await for (var name in getControllerStream()) {
-    print(name);
-  }
+  // await for (var name in getControllerStream()) {
+  //   print(name);
+  // }
+  await nonBroadcastStreamExample();
   // broadCast stream multiple listners
   // await nonBroadcastStreamExample();
 }
@@ -14,7 +17,7 @@ Stream<String> getControllerStream() async* {
   controller.sink.add('hi');
   controller.sink.add('bye');
   controller.sink.add('variable');
-  yield* await controller.stream;
+  yield* await controller.stream; //Stream<String>
 }
 
 Future<void> nonBroadcastStreamExample() async {
@@ -23,7 +26,7 @@ Future<void> nonBroadcastStreamExample() async {
   controller.sink.add('hi');
   controller.sink.add('bye');
   controller.sink.add('variable');
-
+// we cannot have 2 listners to single stream
   try {
     await for (final name in controller.stream) {
       print(name);
@@ -31,22 +34,27 @@ Future<void> nonBroadcastStreamExample() async {
         print(name);
       }
     }
-  } catch (e, stackTrace) {}
+    final lis1 = controller.stream.listen((name) {
+      print(name);
+    });
+  } catch (e, stackTrace) {
+    log('caught non Broadcast',error: e,stackTrace: stackTrace);
+  }
 }
 
 Future<void> broadcastStreamExample() async {
-  final controller = StreamController<String>();
-
+  late final controller;
+  controller = StreamController<String>.broadcast();
   controller.sink.add('hi');
-  controller.sink.add('bye');
-  controller.sink.add('variable');
-
   try {
-    await for (final name in controller.stream) {
+    final list1 = controller.stream.listen((name) {
       print(name);
-      await for (final name in controller.stream) {
-        print(name);
-      }
-    }
+    });
+    final list2 = controller.stream.listen((data) {
+      print(data);
+    });
+print(list1);
+    controller.sink.add('bye');
+    controller.sink.add('variable');
   } catch (e, stackTrace) {}
 }
