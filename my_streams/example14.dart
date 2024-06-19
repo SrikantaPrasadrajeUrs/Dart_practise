@@ -1,9 +1,28 @@
 import 'dart:async';
 
-void main(List<String> args) {}
+void main(List<String> args) async {
+  try {
+    await for (var name in getNames().withTimeOutBetweenEvents()) {
+      print(name);
+    }
+  } catch (e, stackTrace) {
+    print("Exception was thrown $e $stackTrace");
+  }
+}
 
-extension <E> on Stream<E> {
+Stream<String> getNames() async* {
+  yield "john";
+  yield "joshep";
+  yield "lion";
+  yield "batman";
+  yield "arjun";
+  await Future.delayed(const Duration(milliseconds: 1900));
+  yield "beeshma";
+}
 
+extension WithTimeOutBetweenEvents<E> on Stream<E> {
+  Stream<E> withTimeOutBetweenEvents() =>
+      transform(TimeOutBetWeenEvents(Duration(milliseconds: 1920)));
 }
 
 class TimeOutBetWeenEvents<E> extends StreamTransformerBase<E, E> {
