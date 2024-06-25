@@ -8,9 +8,17 @@ void main(List<String> args) {
   //     })) {
   //   print("Present");
   // }
-  if ("cdೆ".contains('ೆ')) {
-    print("present");
-  }
+  // if ("cdೆ".contains('ೆ')) {
+  //   print("present");
+  // }
+  example1();
+}
+
+void example1() {
+  List<String> cellvalues = ["D12", "F21", "GG4", "A1"];
+  List<String> cellRanges = ["F21", "GG4"];
+  cellvalues.removeWhere((e) => cellRanges.contains(e));
+  print(cellvalues);
 }
 
 final List<String> pcrFormulas = [
