@@ -22,5 +22,10 @@ void test1() {
   RegExpMatch? match = regExp.firstMatch(formula);
   print(match?.group(1));
   print(match?.group(2));
-}
-
+// }
+//   String colRef = "";
+//   while (colIndex >= 0) {
+//     colRef = String.fromCharCode((colIndex % 26) + 'A'.codeUnitAt(0)) + colRef;
+//     colIndex = (colIndex ~/ 26) - 1;
+//   }
+//   return colRef;
