@@ -2,12 +2,12 @@ import "dart:collection";
 
 class Solution {
   int calculate(String s) {
-    int l = s.length;
+    int len = s.length;
     int sign = 1;
     int answer = 0;
     Queue<int> stack = Queue<int>();
 
-    for(int i=0;i<l;i++){
+    for(int i=0;i<len;i++){
         String currentChar = s[i];
       switch(currentChar){
         case "+":{
@@ -36,7 +36,7 @@ class Solution {
         }
         default:{
             int startIndex = i;
-            while(i<l&&isDigit(s[i])){
+            while(i<len&&isDigit(s[i])){
                 i++;
             }
             answer+=sign*int.parse(s.substring(startIndex,i));
