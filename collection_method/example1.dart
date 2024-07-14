@@ -13,7 +13,20 @@ void main(List<String> args) {
   // }
   example1();
 }
-
+class Solution {
+  int addDigits(int num) {
+    int len ='$num'.length;
+    int sum=0;
+    while(len>0){
+        len--;
+        // print(n);
+        sum+=num%10;
+        num=(num~/10);
+    
+    }
+    return '$sum'.length>1?addDigits(sum):sum;
+  }
+}
 void example1() {
   List<String> cellvalues = ["D12", "F21", "GG4", "A1"];
   List<String> cellRanges = ["F21", "GG4"];
