@@ -20,18 +20,19 @@ String columnIndexToChar(int colIndex) {
 
 void main() {
   // Test cases
-  print(charToColumnIndex("A")); // 0
-  print(charToColumnIndex("Z")); // 25
-  print(charToColumnIndex("AA")); // 26
-  print(charToColumnIndex("AB")); // 27
-  print(charToColumnIndex("BA")); // 52
-  print(charToColumnIndex("Ab")); // 701
+  // print(charToColumnIndex("A")); // 0
+  // print(charToColumnIndex("Z")); // 25
+  // print(charToColumnIndex("AA")); // 26
+  // print(charToColumnIndex("AB")); // 27
+  // print(charToColumnIndex("BA")); // 52
+  // print(charToColumnIndex("Ab")); // 701
 
-  // print(columnIndexToChar(0)); // A
+  print(columnIndexToChar(701)); // A
   // print(columnIndexToChar(25)); // Z
   // print(columnIndexToChar(26)); // AA
   // print(columnIndexToChar(27)); // AB
   // print(columnIndexToChar(52)); // BA
   // print(columnIndexToChar(701)); // ZZ
-  // print((4.199999999999999 * 10).round()/10);
+  print(0%26);
+
 }

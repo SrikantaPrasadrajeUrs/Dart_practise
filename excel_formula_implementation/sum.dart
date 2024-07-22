@@ -1,3 +1,5 @@
+import "../my_regex/my_regex.dart";
+
 abstract class MyCustomInbuiltFunctions {
   dynamic sum(
       {required String formula,

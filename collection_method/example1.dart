@@ -11,8 +11,19 @@ void main(List<String> args) {
   // if ("cdೆ".contains('ೆ')) {
   //   print("present");
   // }
-  example1();
+  example2();
 }
+
+void example2(){
+  const unUsedCustomFormula = [
+  'QUESTION_INDEX',
+  'GET_QUESTION_ID'
+];
+if(!unUsedCustomFormula.any((e)=>"QUESTION_INDEX".contains(e))){
+print("not present");
+}
+}
+
 
 void example1() {
   List<String> cellvalues = ["D12", "F21", "GG4", "A1"];

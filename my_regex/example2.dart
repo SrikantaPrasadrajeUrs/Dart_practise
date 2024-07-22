@@ -1,7 +1,18 @@
+import 'my_regex.dart';
+
 void main(List<String> args) {
-  example4();
+  example6();
 }
 
+void example6(){
+  print(MyRegex.cellMatchRegex.firstMatch("E1")?.group(0));
+}
+
+void example5(){
+  print(int.parse('1'));
+  String formula = "E1";
+  print(MyRegex.matchValueInsideParenthesis.firstMatch(formula)?.group(1));
+}
 void example1() {
   String formula = "SUM(val:val1,val2)";
   RegExp regExp = RegExp(r'\(([^)]+)\)');
@@ -38,7 +49,7 @@ void example3() {
 //RegExp(r'([A-Z]+!)?[A-Z]+\d+:[A-Z]+\d+') mathc sheetname and cell val:cell value
 //RegExp(r'[A-Z]+\d+:[A-Z]+\d+') on cell range => :
 void example4() {
-  String formula = "PCR!DD1633,E2,D17,PCR!EE1332:question_id!G13,A2:B3";
+  String formula = "PCR!DD1633,E2,G13,D17,PCR!EE1332:question_id!G13,A2:B3";
   RegExp rangeRefRegex =
       RegExp(r'([^!,:\s]+!)?[A-Z]+\d+:([^!,:\s]+!)?[A-Z]+\d+');
   RegExp cellRefRegExp = RegExp(r'([^!,:\s]+!)?[A-Z]+\d+');
@@ -46,3 +57,5 @@ void example4() {
   print('-------------');
   cellRefRegExp.allMatches(formula).forEach((E) => print(E.group(0)));
 }
+
+
