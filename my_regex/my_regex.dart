@@ -11,4 +11,8 @@ class MyRegex{
     return (regExp.hasMatch(formula),regExp.firstMatch(formula)?.group(1));
   }
 }
+<<<<<<< HEAD
 typedef RemovedParenthesis = (bool,String?);
+=======
+
+>>>>>>> 89fa7217146fcb0d956f597d11b04af115b256c5
