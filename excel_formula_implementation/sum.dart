@@ -287,6 +287,16 @@ class SpreadJSInbuiltFunctionsImpl implements MyCustomInbuiltFunctions {
   }
 }
 
+class CalcDataOperation {
+  static int charToColumnIndex(String replaceAll) {
+    return 0;
+  }
+  
+  static int charToRowIndex(String replaceAll) {
+    return 0;
+  }
+}
+
 class SpreadJsHelperMethods {
   static dynamic _applyOperator(double left, double right, String operator) {
     switch (operator) {

@@ -1,5 +1,7 @@
 void main(List<String> args) {
-  print(replaceAllChars("EEER914"));
+ List<int> ans = [1,2,4,2,9,4,5];
+ ans.sort((a, b) => b.compareTo(a));
+ print(ans);
 }
 
 String replaceAllNumbers(String s) {
