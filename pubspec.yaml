@@ -1,0 +1,11 @@
+name: dealdox_demo
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.1.1+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+dependencies:
+  intl: ^0.19.0
