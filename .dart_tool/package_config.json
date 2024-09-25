@@ -3,25 +3,25 @@
   "packages": [
     {
       "name": "clock",
-      "rootUri": "file:///C:/Users/Srikanta%20urs/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "intl",
-      "rootUri": "file:///C:/Users/Srikanta%20urs/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
+      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/Srikanta%20urs/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0",
+      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/Srikanta%20urs/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
+      "rootUri": "file:///Users/apple/.pub-cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -32,10 +32,10 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-09-16T18:53:11.740314Z",
+  "generated": "2024-09-21T08:11:01.622422Z",
   "generator": "pub",
-  "generatorVersion": "3.5.0",
-  "flutterRoot": "file:///C:/src/flutter",
-  "flutterVersion": "3.24.0",
-  "pubCache": "file:///C:/Users/Srikanta%20urs/AppData/Local/Pub/Cache"
+  "generatorVersion": "3.5.3",
+  "flutterRoot": "file:///Users/apple/development/flutter",
+  "flutterVersion": "3.24.3",
+  "pubCache": "file:///Users/apple/.pub-cache"
 }
